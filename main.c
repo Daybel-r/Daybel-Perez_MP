@@ -1,21 +1,37 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-/* Aplicacion de operadores.*/
+/* Empresas textil.
+El programa como datos decisivos la categoria y antiguedad de un empleo,
+determina si el mismo reune las condiciones establecidas por la
+empresa para ocupar un nuevo cargo en una sucursal.
+
+CLA, CAT, ANT, RES: variables de tipo entero.
+SAL: variables de tipo real. */
 
 void main(void)
 {
- int i = 5, j = 4, k, l, m;
-
- k = !i * 3 + --j * 2 - 3;
- printf("\nEl valor de k es: %d", k);
-
- l = ! (!i|| (1 && 0)) && 1;
- printf("\nEl valor de l es: %d", l);
-
-k = !(12 > 10);
-j = (10 || 0)&& k;
-m = (!(k|| j));
-printf("\nEl valor de m es: %d", m);
-return 0;
+int CLA, CAT, ANT, RES;
+printf("\nIngrese la clave, categoria y antiguedad del trabajador:");
+scanf("%d %d %d", &CLA, &CAT, &ANT);
+switch(CAT)
+{
+    case 3:
+    case 4: if (ANT >= 5)
+                RES = 1;
+                else
+                    RES = 0;
+                break;
+       case 2:  if (ANT >= 7)
+                        RES = 1;
+                else
+                            RES = 0;
+                break;
+        default: RES = 0;
+                break;
+}
+if (RES)
+        printf("\nEl trabajador con clave %d reune las condiciones para el puesto",CLA);
+else
+        printf("\nEl trabajador con clave %d no reune las condiciones para
+        el puesto", CLA);
 }
