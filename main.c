@@ -1,37 +1,28 @@
 #include <stdio.h>
 
-/* Empresas textil.
-El programa como datos decisivos la categoria y antiguedad de un empleo,
-determina si el mismo reune las condiciones establecidas por la
-empresa para ocupar un nuevo cargo en una sucursal.
+/* Numeros perfectos.
+El programa, al recibir como dato un numero entero positivo como limite, obtiene
+los numeros perfectos que hay entre 1 y ese numero, y ademas imprime cuantos
+numeros perfectos hay en el intervalo.
 
-CLA, CAT, ANT, RES: variables de tipo entero.
-SAL: variables de tipo real. */
+I, J, NUM, C: variables de tipo entero. */
 
-void main(void)
+voidmain(void)
 {
-int CLA, CAT, ANT, RES;
-printf("\nIngrese la clave, categoria y antiguedad del trabajador:");
-scanf("%d %d %d", &CLA, &CAT, &ANT);
-switch(CAT)
+int I, J, NUM, SUM, C =0;//I Es el numero a verificar, J es el divisor, NUM es el limite, SUM almacena la suma de divisores, C cuenta los numeros perfectos.
+printf("\nIngrese el numero limite: ");
+scanf("%d", &NUM);// Solicita y lee el numero limite ingresado por el usuario.
+for(I = 1; I <= NUM; I++)// Ciclo para encontrar los divisores de I
 {
-    case 3:
-    case 4: if (ANT >= 5)
-                RES = 1;
-                else
-                    RES = 0;
-                break;
-       case 2:  if (ANT >= 7)
-                        RES = 1;
-                else
-                            RES = 0;
-                break;
-        default: RES = 0;
-                break;
-}
-if (RES)
-        printf("\nEl trabajador con clave %d reune las condiciones para el puesto",CLA);
-else
-        printf("\nEl trabajador con clave %d no reune las condiciones para
-        el puesto", CLA);
-}
+    SUM = 0;// Inicializa la suma de divisores en 0 para cada nuevo numero I.
+    for (J = 1; J <= (I /2); J++) // Ciclo para encontrar los divisores de I
+    if ((I % J)== 0) //Si J es divisor del I (el residuo del I divido por J es 0
+            SUM += J; // Suma el divisor J a la variable SUM.
+    if (SUM == I)// Si la suma de los divisores es igual I, entonces es un numero perfecto
+    {
+        printf("\n%d es un numero perfecto", I);// imprime que I es un numero perfecto.
+        C++;// Incrementa el contador de numeros perfectos.
+        }
+    }
+    printf("\nEntres 1 y %d hay %d numeros perfectos", NUM, C);// Imprime el numero total  de numeros perfectos encontrados en el intervalo.
+    }
