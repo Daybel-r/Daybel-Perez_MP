@@ -86,7 +86,7 @@ printf("\n\nProvincia con menor registro anual de lluvias en el último ano: %d"
     EMEN+1);
 printf("\nRegistro anual: %.2f", ELLU);
 }
-void Funcion3(float A[][MES][AnO],int F, int C, int P)
+void Funcion3(float A[][MES][Ano],int F, int C, int P)
 
 /* Esta función se utiliza para localizar el mes con mayor registro de lluvias en
 ➥la provincia 18 en el quinto año. Escribe además el registro correspondiente. */
