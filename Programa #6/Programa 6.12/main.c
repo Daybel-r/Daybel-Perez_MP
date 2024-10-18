@@ -6,23 +6,23 @@ informacion sobre lluvias, genera informacion estadistica. */
 
 const int PRO = 24;
 const int MES = 12;
-const int Año = 10;
+const int Ano = 10;
 
-void Lectura(float [PRO][MES][AÑO], int, int, int);
-void Function1(float [PRO][MES][AÑO], int, int,);
-void Function2(float [PRO][MES][AÑO], int, int, int]; /* Prototipos de funciones. */
-void Function3(float [PRO] [MES AÑO],int, int, int);
+void Lectura(float [PRO][MES][Ano], int, int, int);
+void Function1(float [PRO][MES][Ano], int, int,);
+void Function2(float [PRO][MES][Ano], int, int, int]; /* Prototipos de funciones. */
+void Function3(float [PRO] [MES Ano],int, int, int);
 
 void main(void)
 {
-float LLU[PRO][MES][AÑO];
-Lectura(LLU, PRO, MES, AÑO);
-Function1(LLU, PRO, MES, AÑO);
-Function2(LLU, PRO, MES, AÑO);
+float LLU[PRO][MES][AnO];
+Lectura(LLU, PRO, MES, AnO);
+Function1(LLU, PRO, MES, AnO);
+Function2(LLU, PRO, MES, AnO);
 Function3(LLU, 18, MES, 5);
 }
 
-void Lectur (float A[][MES][AÑO], int F, int C, int P)
+void Lectur (float A[][MES][AnO], int F, int C, int P)
 /* Esta funcion se utiliza para leer un arreglo tridimensional de tipo real de
 F filas, C columnas y P planos de profundidad. */
 {
@@ -31,12 +31,12 @@ for (K=0; K<P; K++)
     for (I=0; I<F; I++)
         for (J=0; J<C; J++)
         {
-            printf("AÑO: %d\tProvincia: %d\tMes: %D" , K+1, I+1 J+1);
+            printf("Ano: %d\tProvincia: %d\tMes: %D" , K+1, I+1 J+1);
             scanf("%f", &A[I][J][K]);
     }
 }
 
-void funcion(float A[][MES][AÑO], int F, int C, int P)
+void funcion(float A[][MES][AnO], int F, int C, int P)
 /* Esta funcion se utiliza para localizar la provincia que tuvo el mayor registro
 de precipitacion pluvial en los ultimos 10 años. Escribe ademas el registro
 correpondiente. */
@@ -58,11 +58,11 @@ ELLU = SUM;
 EMAY = I;
 }
 }
-printf(”\n\nProvincia con mayor registro de lluvias: %d”, EMAY+1);
+printf("\n\nProvincia con mayor registro de lluvias: %d", EMAY+1);
 
-printf(”\nRegistro: %.2f”, ELLU);
+printf("\nRegistro: %.2f", ELLU);
 }
-void Funcion2(float A[][MES][AÑO],int F, int C, int P)
+void Funcion2(float A[][MES][AnO],int F, int C, int P)
 
 /* Esta función se utiliza para localizar la provincia que tuvo el menor registro
 ➥de lluvias en el último año. Escribe además el registro correspondiente. */
@@ -81,12 +81,12 @@ ELLU = SUM;
 EMEN = I;
 }
 }
-printf(”\n\nProvincia con menor registro anual de lluvias en el último año: %d”,
+printf("\n\nProvincia con menor registro anual de lluvias en el último ano: %d",
 
     EMEN+1);
-printf(”\nRegistro anual: %.2f”, ELLU);
+printf("\nRegistro anual: %.2f", ELLU);
 }
-void Funcion3(float A[][MES][AÑO],int F, int C, int P)
+void Funcion3(float A[][MES][AnO],int F, int C, int P)
 
 /* Esta función se utiliza para localizar el mes con mayor registro de lluvias en
 ➥la provincia 18 en el quinto año. Escribe además el registro correspondiente. */
@@ -102,6 +102,6 @@ if (A[F-1][J][P-1] > ELLU)
     EMES = J;
     }
 }
-printf(”\n\nMes: %d Lluvias: %.2f”, EMES+1, ELLU);
+printf("\n\nMes: %d Lluvias: %.2", EMES+1, ELLU);
 }
 
