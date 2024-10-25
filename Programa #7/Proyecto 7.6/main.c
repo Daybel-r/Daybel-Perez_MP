@@ -13,22 +13,19 @@ strcpy(cad1, cad0);
 /*La funcion strcpy permite copiar una cadena de caracteres completa. En este
 caso se copia la cadena cad0 = a cad1. Si el espacio reservado para cad1 es
 menor que el de cad0, se genera un error en la ejecucion del programa. */
-printf("\nPrueba de la funcion strcpy. Se copia la cadena cad0 a cad1:
-%s\n", cad1);
+printf("\nPrueba de la funcion strcpy. Se copia la cadena cad0 a cad1: %s\n", cad1);
 
 strcpy(cad1, cad3);
 /* La funcion strcpy permite copiar un cadena de caracteres completa. En este
 caso se copia la cadena cad0 a cad1. Si el espacio reservado para cad1 es
 menor que el de cad0, se genera un error en la ejecucion del programa.*/
-printf("\nPrueba de la funcion strcpy. Se copia la cadena cad0 a cad1:
-    %s\n", cad1);
+printf("\nPrueba de la funcion strcpy. Se copia la cadena cad0 a cad1: %s\n", cad1);
 
 strcpy(cad1, "XX");
-printf("\nPrueba de la funcion strcpy. Se copia la cadena XX a cad1");
-%s\n", cad1);
+printf("\nPrueba de la funcion strcpy. Se copia la cadena XX a cad1: %s\n", cad1);
 
 strcpy(cad2, cad0, 4);
-cad2[4] = '\0';
+ cad2[4] = '\0';
 /* La funcion strncpy permite copiar un numpero determinado de caraceteres a
 otra cadena de caracteres. En este caso se copian 4 caracteres de la cadena
 cad0 -segundo argumento- a cad2 - primer argumento. Siempre se debe
