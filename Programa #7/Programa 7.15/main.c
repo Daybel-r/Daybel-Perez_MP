@@ -17,11 +17,11 @@ gets(cad);
 interpreta(cad);
 }
 
-void interpreta(char *cadena)
+void interpreta(char* cad)
 /* Esta funcion se utiliza para decodificar la cadena de caracteres. */
 {
 int i = 0, j, k;
-while (cad[i] != '\0')
+while(cad[i] != '\0')
 {
     if (isalpha (Cad[i]))         /* Se utiliza isalpha para observar si el caracter
     {                               es una letra. */
